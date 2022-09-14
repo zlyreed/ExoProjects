@@ -22,6 +22,14 @@ Two types of sensors at different sampling frequencies:
 - Delsys Avanti: 1259 Hz
 - Delsys Quattro: 2222 Hz
 
+#### EMG processing
+- Filter
+- Rectify and Smooth (RMS)
+- Analysis on processed EMG data: 
+  - Mean and/or Median
+  - Peak 
+  - Amplitude Probability Report (idea from Noraxon software): percentage of time at three levels (above, within, and below 20%~30% of MVC)
+
 ### Force plate data
 
 ### Kinematics data
