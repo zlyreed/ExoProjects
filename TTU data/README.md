@@ -22,13 +22,19 @@ Two types of sensors at different sampling frequencies:
 - Delsys Avanti: 1259 Hz
 - Delsys Quattro: 2222 Hz
 
+Six muscles: Biceps, Triceps, Posterior deltoid, Medial deltoid, Anterior deltoid, Upper trapezius
+- ![6Muscles1](Pictures/ArmMuscles1.jpg "Arm_Muscles1")
+- ![6Muscles2](Pictures/ArmMuscles2.jpg "Arm_Muscles2")
+
 #### EMG processing
 - Filter
 - Rectify and Smooth (RMS)
-- Analysis on processed EMG data: 
-  - Mean and/or Median
-  - Peak 
-  - Amplitude Probability Report (idea from Noraxon software): percentage of time at three levels (above, within, and below 20%~30% of MVC)
+- normalize (based on MVC)
+
+#### EMG Analysis (on processed EMG data): 
+- Mean and/or Median
+- Peak 
+- Amplitude Probability Report (idea from Noraxon software): percentage of time at three levels (above, within, and below 20%~30% of MVC)
 
 ### Force plate data
 
