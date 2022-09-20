@@ -27,14 +27,26 @@ Six muscles: Biceps, Triceps, Posterior deltoid, Medial deltoid, Anterior deltoi
   ![6Muscles2](Pictures/ArmMuscles2.jpg "Arm_Muscles2")
 
 #### EMG processing
-- Filter
-- Rectify and Smooth (RMS)
-- Normalize (based on MVC)
+##### For MVC values
+- MVC1: use MVC trials
+  - Filter, Rectify and Smooth (RMS) on the MVC trials (EMG_Processing_MVC_S0510.m; EMG_Processing_MVC_S03.m)
+  - maximum of the MVC trials (EMG_Calculate_MVC_S030510.m)
 
-#### EMG Analysis (on processed EMG data): 
+- MVC2:use maximum of the dynamic trials (the whole trials) (EMG_Calculate_MVC_MaxDynamicTrials.m)
+  - Need work on it (there are higher values in dynamc trials than in the MVC trials)
+
+##### For the Dynamic Trials 
+- 1. Filter, Rectify and Smooth (RMS)
+- 2a. Normalize (based on the MVC1 values): "EMG_Processing_DynamicTrials.m"
+- 2b. Normalize (based on the MVC2 values): need to work on "EMG_Processing_DynamicTrials_byMaxDyna.m"
+
+
+#### EMG Analysis (on processed EMG data): based on book EMG ABC 
+##### Output the result csv file and plot normalized EMG data(NormalizedEMG_calculations.m)
 - Mean and/or Median
 - Peak 
-- Amplitude Probability Report (idea from Noraxon software): percentage of time at three levels (above, within, and below 20%~30% of MVC)
+- Area 
+- Need to look into: Amplitude Probability Report (idea from Noraxon software): percentage of time at three levels (above, within, and below 20%~30% of MVC)
 
 ### Force plate data
 
