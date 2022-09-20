@@ -36,9 +36,10 @@ Six muscles: Biceps, Triceps, Posterior deltoid, Medial deltoid, Anterior deltoi
   - Need work on it (there are higher values in dynamc trials than in the MVC trials)
 
 ##### For the Dynamic Trials 
-- 1. Filter, Rectify and Smooth (RMS)
-- 2a. Normalize (based on the MVC1 values): "EMG_Processing_DynamicTrials.m"
-- 2b. Normalize (based on the MVC2 values): need to work on "EMG_Processing_DynamicTrials_byMaxDyna.m"
+- Filter, Rectify and Smooth (RMS)
+- Normalize 
+   - based on the MVC1 values): "EMG_Processing_DynamicTrials.m"
+   - based on the MVC2 values): need to work on "EMG_Processing_DynamicTrials_byMaxDyna.m"
 
 
 #### EMG Analysis (on processed EMG data): based on book EMG ABC 
