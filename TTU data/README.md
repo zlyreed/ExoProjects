@@ -19,28 +19,38 @@ The Bertec force plates, kinematics (MOCAP), and EMG were synchronized in Cortex
 
 ### EMG data
 Two types of sensors at different sampling frequencies:
-- Delsys Avanti: 1259 Hz
-- Delsys Quattro: 2222 Hz
+- Delsys Avanti: 1259 Hz (bigger sensor)
+- Delsys Quattro: 2222 Hz (smaller sensor)
 
 Six muscles: Biceps, Triceps, Posterior deltoid, Medial deltoid, Anterior deltoid, Upper trapezius
   ![6Muscles1](Pictures/ArmMuscles1.jpg "Arm_Muscles1")
   ![6Muscles2](Pictures/ArmMuscles2.jpg "Arm_Muscles2")
 
 #### EMG processing
-##### For MVC values
-- MVC1: use MVC trials
-  - Filter, Rectify and Smooth (RMS) on the MVC trials (EMG_Processing_MVC_S0510.m; EMG_Processing_MVC_S03.m)
-  - maximum of the MVC trials (EMG_Calculate_MVC_S030510.m)
+_*1. Approach One (using the MVC1 values from the MVC trials)*_
+- To obtain the MVC values (**MVC1**)
+	- Filter, Rectify and Smooth (RMS) on the MVC trials (EMG_Processing_MVC_S0510.m; EMG_Processing_MVC_S03.m)
+	  - output: 
+	    - *mXX_processed6EMG_w05.mat* (processed MVC trials using window @ 0.05s)
+	    - *mXX_processed6EMG_w01.mat* (processed MVC trials using window @ 0.01s) 
+	- maximum of the MVC trials (EMG_Calculate_MVC_S030510.m)
+	  - output: 
+	    - *MVC_6Muscles.mat* (the MVC values of six muscles at window=0.01s [row 1] and at at window=0.05s [**row 2**; use this one])
 
-- MVC2:use maximum of the dynamic trials (the whole trials) (EMG_Calculate_MVC_MaxDynamicTrials.m)
+- For the Dynamic Trials 
+	- Filter, Rectify and Smooth (RMS; window=0.05s) on the dynamic trials
+	- cut to the range of the trial only 
+	- Normalize by the time and the MVC1 (**% of task** vs. **% of MVC**)
+	   - based on the MVC1 values: "EMG_Processing_DynamicTrials.m"
+	     - output: 
+	       -- "Results_normalizedEMG_byMVCtrials.csv"
+  
+   
+_*2. Approach Two (using the MVC2 values from the dynamic trials)*_
+- MVC2: use maximum of the dynamic trials (the whole trials) (EMG_Calculate_MVC_MaxDynamicTrials.m)
   - Need work on it (there are higher values in dynamc trials than in the MVC trials)
-
-##### For the Dynamic Trials 
-- Filter, Rectify and Smooth (RMS)
-- Normalize 
-   - based on the MVC1 values): "EMG_Processing_DynamicTrials.m"
-   - based on the MVC2 values): need to work on "EMG_Processing_DynamicTrials_byMaxDyna.m"
-
+  
+- based on the MVC2 values: need to work on "EMG_Processing_DynamicTrials_byMaxDyna.m"
 
 #### EMG Analysis (on processed EMG data): based on book EMG ABC 
 ##### Output the result csv file and plot normalized EMG data(NormalizedEMG_calculations.m)
