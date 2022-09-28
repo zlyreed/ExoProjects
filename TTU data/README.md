@@ -29,7 +29,7 @@ Six muscles: Biceps, Triceps, Posterior deltoid, Medial deltoid, Anterior deltoi
 #### EMG processing and Analysis
 _*1. Approach One (using the MVC values from the MVC trials)*_
 - To obtain the MVC values (**MVC1**)
-	- Filter, Rectify and Smooth (RMS) on the MVC trials--"m1 to m10" (EMG_Processing_MVC_S0510.m; EMG_Processing_MVC_S03.m)
+	- Filter, Rectify and Smooth (RMS) on the MVC trials--"m1 to m10" ([EMG_Processing_MVC_S03.m](functions/EMG_Processing_MVC_S03.m);EMG_Processing_MVC_S0510.m)
 	  - output: 
 	    - *mXX_processed6EMG_w05.mat* (processed MVC trials using window @ 0.05s)
 	    - *mXX_processed6EMG_w01.mat* (processed MVC trials using window @ 0.01s) 
