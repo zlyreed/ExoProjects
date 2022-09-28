@@ -1,4 +1,4 @@
-# Testing Data from SC: 
+# Testing Data from the vendor: 
 
 ## Experiment
 Block-laying task on the wobbling platform -- lifting a 35-lb cinder block (8 x 8 x 16 inches) from the production table (at the left side; at the tronchanterion height) to a simulated wall (at the right side) 
@@ -45,8 +45,8 @@ _*1. Approach One (using the MVC values from the MVC trials)*_
 	     - output: 
 	       -*txx_EMG_w05_cut_normbyTimeMVC.mat*
 	       
-- Analysis on the normalized EMG data
-  - Mean, Peak and Area 
+- To analyze the normalized EMG data ("t17 to t32")
+  - Mean, Peak and Area (based on book EMG ABC)
   - [later] may need to look into Amplitude Probability Report (idea from Noraxon software): percentage of time at three levels (above, within, and below 20%~30% of MVC)
   - use "NormalizedEMG_calculations1.m"
   - output:
@@ -56,17 +56,23 @@ _*1. Approach One (using the MVC values from the MVC trials)*_
 
    
 _*2. Approach Two (using the MVC2 values from the dynamic trials)*_
-- MVC2: use maximum of the dynamic trials (the whole trials) (EMG_Calculate_MVC_MaxDynamicTrials.m)
-  - Need work on it (there are higher values in dynamc trials than in the MVC trials)
-  
-- based on the MVC2 values: need to work on "EMG_Processing_DynamicTrials_byMaxDyna.m"
+- To obatin MVC2 (use the maximum EMG values of th muscles across the whole dynamic trials) and process/nomalize the EMG data of the dynamic trials
+  - Process all the dynamic trials and obtain MVC2 (EMG_Calculate_MVC_MaxDynamicTrials.m)
+    - ouput: 
+      - *txx_processed6EMG_w05.mat*
+      - *MVC_6Muscles_MaxDynamicTrial.mat*
+  -  Cut to the range of the tasks and normalize by the MVC2 and the time (EMG_Processing_DynamicTrials_byMaxDyna.m) 
+    - ouput:
+      - *txx_processed6EMG_w05_cut.mat*
+      - *txx_EMG_w05_cut_normbyTimeMVC2*
+      
+- To analyze on the normalized EMG data (NormalizedEMG_calculations2.m)
+  - output:
+    - - plots of normalized EMG data(**% of task** vs. **% of MVC**)
+    - *Results_normalizedEMG_byMaxofDynamicTrials.mat*
+    - *Results_normalizedEMG_byMaxofDynamicTrials.csv*
 
-#### EMG Analysis (on processed EMG data): based on book EMG ABC 
-##### Output the result csv file and plot normalized EMG data(NormalizedEMG_calculations.m)
-- Mean and/or Median
-- Peak 
-- Area 
-- Need to look into: Amplitude Probability Report (idea from Noraxon software): percentage of time at three levels (above, within, and below 20%~30% of MVC)
+
 
 **Notes from vendor:**
 The first subject was not included in EMG analysis since we had problems with the MVC trials and MOCAP-EMG synchronization. We provided the raw data but we did not include it in the statistical analysis. However, subject 1 kinematics data were included in the statistical analysis.
