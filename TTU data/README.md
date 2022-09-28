@@ -45,7 +45,7 @@ _*1. Approach One (using the MVC values from the MVC trials)*_
 	     - output: 
 	       - *txx_processed6EMG_w05.mat*
 	       - *txx_processed6EMG_w05_cut.mat*
-	       - *txx_EMG_w05_cut_normbyTimeMVC.mat*
+	       - *txx_EMG_w05_cut_normbyTimeMVC1.mat*
 	       
 - To analyze the normalized EMG data ("t17 to t32")
   - Mean, Peak and Area (based on book EMG ABC)
@@ -57,7 +57,7 @@ _*1. Approach One (using the MVC values from the MVC trials)*_
     - *Results_normalizedEMG_byMVCtrials.csv*
 
    
-_*2. Approach Two (using the MVC2 values from the dynamic trials)*_
+_*2. Approach Two (using the MVC values from the dynamic trials)*_
 - To obatin MVC2 (use the maximum EMG values of th muscles across the whole dynamic trials) and process/nomalize the EMG data of the dynamic trials
   - Process all the dynamic trials and obtain MVC2 (EMG_Calculate_MVC_MaxDynamicTrials.m)
     - ouput: 
@@ -66,7 +66,7 @@ _*2. Approach Two (using the MVC2 values from the dynamic trials)*_
   -  Cut to the range of the tasks and normalize by the MVC2 and the time (EMG_Processing_DynamicTrials_byMaxDyna.m) 
     - ouput:
       - *txx_processed6EMG_w05_cut.mat*
-      - *txx_EMG_w05_cut_normbyTimeMVC2*
+      - *txx_EMG_w05_cut_normbyTimeMVC2.mat*
       
 - To analyze on the normalized EMG data (NormalizedEMG_calculations2.m)
   - output:
