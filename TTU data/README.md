@@ -26,8 +26,8 @@ Six muscles: Biceps, Triceps, Posterior deltoid, Medial deltoid, Anterior deltoi
   ![6Muscles1](Pictures/ArmMuscles1.jpg "Arm_Muscles1")
   ![6Muscles2](Pictures/ArmMuscles2.jpg "Arm_Muscles2")
 
-#### EMG processing
-_*1. Approach One (using the MVC1 values from the MVC trials)*_
+#### EMG processing and Analysis
+_*1. Approach One (using the MVC values from the MVC trials)*_
 - To obtain the MVC values (**MVC1**)
 	- Filter, Rectify and Smooth (RMS) on the MVC trials--"m1 to m10" (EMG_Processing_MVC_S0510.m; EMG_Processing_MVC_S03.m)
 	  - output: 
@@ -37,14 +37,23 @@ _*1. Approach One (using the MVC1 values from the MVC trials)*_
 	  - output: 
 	    - *MVC_6Muscles.mat* (the MVC values of six muscles at window=0.01s [row 1] and at at window=0.05s [**row 2**; use this one])
 
-- For the Dynamic Trials ("t17 to t32")
+- To process the Dynamic Trials ("t17 to t32")
 	- Filter, Rectify and Smooth (RMS; window=0.05s) on the dynamic trials
 	- cut to the range of the trial only 
 	- Normalize by the time and the MVC1 (**% of task** vs. **% of MVC**)
 	   - based on the MVC1 values: "EMG_Processing_DynamicTrials.m"
 	     - output: 
-	       -- "Results_normalizedEMG_byMVCtrials.csv"
-  
+	       -*txx_EMG_w05_cut_normbyTimeMVC.mat*
+	       
+- Analysis on the normalized EMG data
+  - Mean, Peak and Area 
+  - [later] may need to look into Amplitude Probability Report (idea from Noraxon software): percentage of time at three levels (above, within, and below 20%~30% of MVC)
+  - use "NormalizedEMG_calculations1.m"
+  - output:
+    - plots of normalized EMG data (**% of task** vs. **% of MVC**)
+    - *Results_normalizedEMG_byMVCtrials.mat*
+    - *Results_normalizedEMG_byMVCtrials.csv*
+
    
 _*2. Approach Two (using the MVC2 values from the dynamic trials)*_
 - MVC2: use maximum of the dynamic trials (the whole trials) (EMG_Calculate_MVC_MaxDynamicTrials.m)
