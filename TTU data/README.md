@@ -43,7 +43,9 @@ _*1. Approach One (using the MVC values from the MVC trials)*_
 	- Normalize by the time and the MVC1 (**% of task** vs. **% of MVC**)
 	   - based on the MVC1 values: "EMG_Processing_DynamicTrials.m"
 	     - output: 
-	       -*txx_EMG_w05_cut_normbyTimeMVC.mat*
+	       - *txx_processed6EMG_w05.mat*
+	       - *txx_processed6EMG_w05_cut.mat*
+	       - *txx_EMG_w05_cut_normbyTimeMVC.mat*
 	       
 - To analyze the normalized EMG data ("t17 to t32")
   - Mean, Peak and Area (based on book EMG ABC)
@@ -68,7 +70,7 @@ _*2. Approach Two (using the MVC2 values from the dynamic trials)*_
       
 - To analyze on the normalized EMG data (NormalizedEMG_calculations2.m)
   - output:
-    - - plots of normalized EMG data(**% of task** vs. **% of MVC**)
+    - plots of normalized EMG data(**% of task** vs. **% of MVC**)
     - *Results_normalizedEMG_byMaxofDynamicTrials.mat*
     - *Results_normalizedEMG_byMaxofDynamicTrials.csv*
 
