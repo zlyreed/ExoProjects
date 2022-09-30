@@ -25,6 +25,9 @@ Two types of sensors at different sampling frequencies:
 Six muscles: Biceps, Triceps, Posterior deltoid, Medial deltoid, Anterior deltoid, Upper trapezius
   ![6Muscles1](Pictures/ArmMuscles1.jpg "Arm_Muscles1")
   ![6Muscles2](Pictures/ArmMuscles2.jpg "Arm_Muscles2")
+  
+**Notes from vendor:**
+The first subject was not included in EMG analysis since we had problems with the MVC trials and MOCAP-EMG synchronization. We provided the raw data but we did not include it in the statistical analysis. However, subject 1 kinematics data were included in the statistical analysis.
 
 #### EMG processing and Analysis
 _*1. Approach One (using the MVC values from the MVC trials)*_
@@ -69,16 +72,27 @@ _*2. Approach Two (using the MVC values from the dynamic trials)*_
        - *txx_processed6EMG_w05_cut.mat*
        - *txx_EMG_w05_cut_normbyTimeMVC2.mat*
       
-- To analyze on the normalized EMG data (NormalizedEMG_calculations2.m)
+- To analyze on the normalized EMG data (NormalizedEMG_calculations2.m): Mean, Peak and Area (t17-t32)
   - output:
     - plots of normalized EMG data(**% of task** vs. **% of MVC**)
     - *Results_normalizedEMG_byMaxofDynamicTrials.mat*
     - *Results_normalizedEMG_byMaxofDynamicTrials.csv*
 
+#### Statisical Analysis on normalized EMG data
+- Two-way repeated ANOVA
+  - use *TwoWayRANOVA_EMG_byMaxofDynamicTrials.m*
+    - input: *Results_normalizedEMG_byMaxofDynamicTrials.mat* (example)
+    - ouput: *EMG_results_2wayRepeatedANOVA_byMaxofDynamicTrials.xls* (example)
+    
+- Plot means and error bars
+  - use *TwoWayRANOVA_EMG_byMaxofDynamicTrials_Plots.m*
+    - input: *Results_normalizedEMG_byMaxofDynamicTrials.mat* (example)
+    - ouput: 
+      - *results_byMaxofDynamicTrials/EMG_results_MeanSD_byMaxofDynamicTrials.xls* (example)
+      - *results_byMaxofDynamicTrials/plots of mean and error bar (e.g., EMG_SixMuscles_area_elbow.jpg)*
+      
+**Note**: error bar = SD/sqrt(n); which is the standard error of the mean (s.e.m.). More information about [Error bars](https://www.nature.com/articles/nmeth.2659)
 
-
-**Notes from vendor:**
-The first subject was not included in EMG analysis since we had problems with the MVC trials and MOCAP-EMG synchronization. We provided the raw data but we did not include it in the statistical analysis. However, subject 1 kinematics data were included in the statistical analysis.
 
 ### Force plate data
 
