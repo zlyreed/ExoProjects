@@ -61,6 +61,7 @@ _*2. Approach Two (using the MVC values from the dynamic trials)*_
 - To obatin **MVC2** (use the maximum EMG values of the muscles across the whole dynamic trials), and then process/nomalize the EMG data of the dynamic trials
   - Process all the dynamic trials and obtain MVC2 (EMG_Calculate_MVC_MaxDynamicTrials.m)
     - ouput: 
+      - plots of the processed EMG with cutting ranges (*tXX processed EMG_w05.jpg*)
       - *txx_processed6EMG_w05.mat*
       - *MVC_6Muscles_MaxDynamicTrial.mat*
   -  Cut to the range of the tasks and normalize by the MVC2 and the time (EMG_Processing_DynamicTrials_byMaxDyna.m) 
