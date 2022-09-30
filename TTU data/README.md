@@ -80,6 +80,7 @@ _*2. Approach Two (using the MVC values from the dynamic trials)*_
 
 #### Statisical Analysis on normalized EMG data
 - Two-way repeated ANOVA
+  - 7 or 8 subjects (random factors); two factors: devices (4 conditions: NoExo, SuitX,Levitate,Ekso) & lifting levels (2 conditions: elbow and shoulder)
   - use *TwoWayRANOVA_EMG_byMaxofDynamicTrials.m*
     - input: *Results_normalizedEMG_byMaxofDynamicTrials.mat* (example)
     - ouput: *EMG_results_2wayRepeatedANOVA_byMaxofDynamicTrials.xls* (example)
@@ -91,7 +92,7 @@ _*2. Approach Two (using the MVC values from the dynamic trials)*_
       - *results_byMaxofDynamicTrials/EMG_results_MeanSD_byMaxofDynamicTrials.xls* (example)
       - *results_byMaxofDynamicTrials/plots of mean and error bar (e.g., EMG_SixMuscles_area_elbow.jpg)*
       
-**Note**: error bar = SD/sqrt(n); which is the standard error of the mean (s.e.m.). More information about [Error bars](https://www.nature.com/articles/nmeth.2659)
+**Note**: error bar = SD/sqrt(n); which is the standard error of the mean (s.e.m.). More information about [Error bars](https://www.nature.com/articles/nmeth.2659).
 
 
 ### Force plate data
