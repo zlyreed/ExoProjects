@@ -80,7 +80,9 @@ _*2. Approach Two (using the MVC values from the dynamic trials)*_
 
 #### Statisical Analysis on normalized EMG data
 - Two-way repeated ANOVA
-  - 7 or 8 subjects (random factors); two factors: devices (4 conditions: NoExo, SuitX,Levitate,Ekso) & lifting levels (2 conditions: elbow and shoulder)
+  - two factors (with 7 or 8 subjects as a random factor): 
+     - devices with 4 conditions: NoExo, SuitX,Levitate,and Ekso 
+     - lifting levels with 2 conditions: elbow and shoulder
   - use *TwoWayRANOVA_EMG_byMaxofDynamicTrials.m*
     - input: *Results_normalizedEMG_byMaxofDynamicTrials.mat* (example)
     - ouput: *EMG_results_2wayRepeatedANOVA_byMaxofDynamicTrials.xls* (example)
