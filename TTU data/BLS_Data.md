@@ -1,4 +1,30 @@
 ## BLS data
+### Data obtained from BLS website
+- [Databases, Tables & Calculators by Subject](https://www.bls.gov/data/)
+- [Survey of Occupational Injuries and Illnesses Data](https://www.bls.gov/iif/nonfatal-injuries-and-illnesses-tables.htm#summary)
+- 
+
+- [One-Screen Data Search](https://data.bls.gov/PDQWeb/cs)
+- [Multi-Screen Data Search: Nonfatal cases involving days away from work](https://data.bls.gov/cgi-bin/dsrv?cs) 
+  
+  Example to select in Screen 1-7
+  - Screen 1: "00 All U.S."
+  - Screen 2: "0  All ownerships"
+  - Screen 3: "6 Injury and illness cases"
+  - Screen 4: "E Industry division or selected characteristic by detailed event or exposure"
+  - Screen 5: In "Text", search for "Construction", select "047 Occupation- Construction and Extraction Occupations"
+  - Screen 6: In "Text", search for "falls", select "4XXXXX FALLS,SLIPS, TRIPS"
+  - Screen 7: select the form and click "Retrieve data"
+
+- **[Definitions of Injuries and illnesses](https://www.bls.gov/opub/hom/soii/concepts.htm):** 
+
+  The distinction between occupational injury and occupational illness was eliminated from OSHA recordkeeping guidelines when revisions were implemented in 2002. The OSHA guidelines now define an injury or illness as an abnormal condition or disorder. For purposes of clarification for SOII, these terms are still defined separately. Nature codes from the Occupational Injury and Illness Classification System (OIICS) manual are used to code distinct injury and illness cases.
+
+   **Occupational injury is any injury**, such as a cut, fracture, sprain, amputation, and so forth, that results from a work-related event or from a single instantaneous exposure in the work environment.
+
+   **Occupational illness is any abnormal condition or disorder caused by exposure to factors associated with employment, other than those resulting from an instantaneous event or exposure**. It includes **acute and chronic illnesses or diseases** that may be caused by inhalation, absorption, ingestion, or direct contact. Five categories of occupational illnesses and disorders are used to classify recordable illnesses, described as follows. Examples of each category are provided, but these are not a complete listing of the types of illnesses and disorders that are counted under each category. (See the OIICS manual for a more comprehensive list of injuries and illnesses and their associated codes.)
+
+
 ### Reply from Chat Generative Pretrained Transformer ([ChatGPT](https://chat.openai.com/chat)) 
 - **Q: What does "falls, slips and trips" refer to in BLS?**
 
