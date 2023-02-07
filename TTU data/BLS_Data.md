@@ -23,9 +23,9 @@
   
    --- The "health" and "safety" of workers refers to the physical and mental well-being of employees in the workplace.
   
-  "Health" refers to the overall state of physical and mental health of an individual. In the context of the workplace, this includes issues related to occupational health, such as exposure to hazardous materials, repetitive motions, and long hours. It also encompasses general health issues, such as access to healthcare, nutrition, and physical activity.
+  **"Health" refers to the overall state of physical and mental health of an individual.** In the context of the workplace, this includes issues related to occupational health, such as exposure to hazardous materials, repetitive motions, and long hours. It also encompasses general health issues, such as access to healthcare, nutrition, and physical activity.
   
-  "Safety" refers to the measures taken to protect workers from accidents, injuries, and illnesses that may occur in the workplace. This includes measures related to fire safety, hazardous materials, and personal protective equipment. It also includes programs and policies aimed at reducing the risk of workplace accidents, such as safety training, hazard identification, and accident investigation.
+  **"Safety" refers to the measures taken to protect workers from accidents, injuries, and illnesses that may occur in the workplace.** This includes measures related to fire safety, hazardous materials, and personal protective equipment. It also includes programs and policies aimed at reducing the risk of workplace accidents, such as safety training, hazard identification, and accident investigation.
   
   The health and safety of workers is a critical concern for employers, as it has a direct impact on the well-being of employees, the efficiency of the workplace, and the overall success of a business. Employers are responsible for ensuring that the workplace is safe and healthy for employees, and for providing appropriate training and resources to help employees stay healthy and safe on the job.
   
