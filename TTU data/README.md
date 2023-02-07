@@ -12,15 +12,6 @@ Block-laying task on the wobbling platform -- lifting a 35-lb cinder block (8 x 
 	- SX (Suit-X)
 	- Ekso (Eksobionic)
 
-- In the Bureau of Labor Statistics (BLS) system, "falls" and "slips, trips, and falls" are considered separate categories based on the cause of the injury (From Chat Generative Pretrained Transformer (ChatGPT), https://chat.openai.com/).
-
-    - "Falls" refers to injuries that occur as a result of a worker falling **from one level to another**, such as from a ladder or a roof.
-    - "Slips, trips, and falls" refers to a broader category that encompasses all types of injuries that result from a worker slipping, tripping, or falling, including those that occur as a result of slipping on a wet surface, tripping over an object, or **falling from the same level**, such as on a flat surface.
-    - So, the distinction between "falls" and "slips, trips, and falls" is based on the specific cause of the injury, with "falls" being a subcategory of "slips, trips, and falls".
-    - According to the Bureau of Labor Statistics (BLS), in 2020, the rate of nonfatal injuries resulting from falls in **the private construction industry** in the United States was 3.1 cases per 100 equivalent full-time workers.
-    - According to the Bureau of Labor Statistics (BLS), in 2020, the average rate of nonfatal injuries resulting from falls in all private industry in the United States was 0.6 cases per 100 equivalent full-time workers.
-
-
 ## Data Acquisition
 The Bertec force plates, kinematics (MOCAP), and EMG were synchronized in Cortex 9, while K-Invent force plates started recording at the moment the subject stepped onto the K-invent force plate. The Mocap and the K-invent force plate were synchronized manually.
 - The motion capture system was sampled at 60 Hz.
